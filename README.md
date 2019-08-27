@@ -1,18 +1,27 @@
 # terraform-aws-eciisa-app
+
 Terraform stack module which creates resources for eciisa-app (Informatica Secure Agent for Anaplan)
+
 
 # Requirements
 
+Existing EC2 Oracle Application Server
+
 Existing VPC
 
-Existing subnets (Public, App and Data)
+Existing subnets (Private and App)
+
 
 # Below resources will be created
 
-1 ec2 for Application
+1 new role for eciisa
 
-Security group for Application
+1 EC2 for Application
+
+Informatica Secure Agent token
 
 S3 bucket to store data from and to eciisa-app
 
-IAM role and Policy to access s3 bucket from ec2 instances
+Security group for Application
+
+Datadog dashboard and monitor
