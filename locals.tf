@@ -19,4 +19,8 @@ locals {
 
   eciisa_token_name = "/tvlk-secret/shared/eci/eciisa/agent.token"
   eciisa_token_desc = "eciisa token"
+
+  //todo
+  eciisa_role_name          = "InstanceRole_eciisa-app-eb1487e0c44b6198"
+  eciisa_instance_profile   = "InstanceProfile_eciisa-app-eb1487e0c44b6198"
 }

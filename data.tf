@@ -13,7 +13,9 @@ data "terraform_remote_state" "tvlk_ssm_tvlk_secret" {
 }
 
 data "aws_iam_role" "eciisa_app_profile" {
-  name = "${module.eciisa_role.role_name}"
+  //name = "${module.eciisa_role.role_name}"
+  //todo
+  name = "${local.eciisa_role_name}"
 }
 
 data "aws_iam_role" "oebs_app_profile" {
