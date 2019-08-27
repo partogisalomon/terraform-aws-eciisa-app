@@ -9,5 +9,6 @@ output "s3_bucket" {
 }
 
 output "datadog_dashboard" {
+  description = "The datadog dashboard"
   value = "${module.system.timeboard_title}"
 }
