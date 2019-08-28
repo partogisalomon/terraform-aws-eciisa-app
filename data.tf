@@ -11,3 +11,11 @@ data "aws_iam_role" "eciisa_app_profile" {
 data "aws_iam_role" "oebs_app_profile" {
   name = "${local.oebs_app_profile}"
 }
+
+data "aws_ssm_parameter" "datadog_api_key" {
+  name = "${local.datadog_api_key}"
+}
+
+data "aws_ssm_parameter" "agent_token" {
+  name = "${local.agent_token}"
+}

@@ -25,6 +25,7 @@ resource "aws_instance" "eciisa-app" {
   iam_instance_profile   = "${local.eciisa_instance_profile}"
   subnet_id              = "${local.subnet_id}"
   vpc_security_group_ids = ["${aws_security_group.eciisa-app.id}"]
+  user_data_base64       = "${base64encode(local.instance_userdata)}"
 
   root_block_device {
     volume_type           = "gp2"

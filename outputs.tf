@@ -12,3 +12,9 @@ output "datadog_dashboard" {
   description = "The datadog dashboard"
   value = "${module.system.timeboard_title}"
 }
+
+//todo
+output "instance_userdata" {
+  description = "instance userdata, please check whether this is valid"
+  value = "${local.instance_userdata}"
+}
