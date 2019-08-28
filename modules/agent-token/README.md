@@ -1,6 +1,6 @@
 # terraform-aws-eciisa-app/modules/agent-token
 
-This module allows you to create a parameter store to contain the Informatica Secure Agent token, which required for installation
+This module allows you to create a parameter store to contains the Informatica Secure Agent token, which is required for installation
 
 
 # Usage
