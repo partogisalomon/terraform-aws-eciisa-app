@@ -18,10 +18,13 @@ Existing subnets (Private and App)
 
 1 EC2 for Application
 
-Informatica Secure Agent token
-
 S3 bucket to store data from and to eciisa-app
 
 Security group for Application
 
 Datadog dashboard and monitor
+
+
+# Modules
+
+[Informatica Secure Agent token](https://github.com/traveloka/terraform-aws-eciisa-app/tree/master/modules/agent-token)
