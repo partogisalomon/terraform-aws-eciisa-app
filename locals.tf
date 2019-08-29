@@ -21,10 +21,6 @@ locals {
   datadog_app_key   = "/tvlk-secret/shared/eci/datadog/datadog.app.key"
   agent_token       = "/tvlk-secret/shared/eci/eciisa/eciisa-app/eciisa-app-token/agent_token.key"
 
-  //todo
-  eciisa_role_name          = "InstanceRole_eciisa-app-eb1487e0c44b6198"
-  eciisa_instance_profile   = "InstanceProfile_eciisa-app-eb1487e0c44b6198"
-
   instance_userdata = <<EOF
           #cloud-config
 

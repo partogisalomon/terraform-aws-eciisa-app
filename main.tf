@@ -1,8 +1,6 @@
 ##################
 # eciisa role
 ##################
-//todo
-/*
 module "eciisa_role" {
   source = "github.com/traveloka/terraform-aws-iam-role.git//modules/instance?ref=v1.0.2"
 
@@ -11,7 +9,6 @@ module "eciisa_role" {
   product_domain = "${local.product_domain}"
   environment    = "${local.environment}"
 }
-*/
 
 
 ##################
@@ -20,9 +17,7 @@ module "eciisa_role" {
 resource "aws_instance" "eciisa-app" {
   ami                    = "${local.ami_id}"
   instance_type          = "${local.instance_type}"
-  //iam_instance_profile   = "${module.eciisa_role.instance_profile_name}"
-  //todo
-  iam_instance_profile   = "${local.eciisa_instance_profile}"
+  iam_instance_profile   = "${module.eciisa_role.instance_profile_name}"
   subnet_id              = "${local.subnet_id}"
   vpc_security_group_ids = ["${aws_security_group.eciisa-app.id}"]
   user_data_base64       = "${base64encode(local.instance_userdata)}"
