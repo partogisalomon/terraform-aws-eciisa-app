@@ -8,7 +8,6 @@ resource "aws_ssm_parameter" "eciisa_token" {
 
   tags {
     Description   = "${local.eciisa_token_desc}"
-    Environment   = "${local.environment}"
     Name          = "${local.eciisa_token_name}"
     ProductDomain = "${local.product_domain}"
     ManagedBy     = "terraform"
