@@ -16,6 +16,10 @@ data "aws_ssm_parameter" "datadog_api_key" {
   name = "${local.datadog_api_key}"
 }
 
+data "aws_ssm_parameter" "datadog_app_key" {
+  name = "${local.datadog_app_key}"
+}
+
 data "aws_ssm_parameter" "agent_token" {
   name = "${local.agent_token}"
 }

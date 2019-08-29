@@ -18,6 +18,7 @@ locals {
   oebs_app_profile  = "${var.oebs_app_profile}"
 
   datadog_api_key   = "/tvlk-secret/shared/eci/datadog/datadog.api.key"
+  datadog_app_key   = "/tvlk-secret/shared/eci/datadog/datadog.app.key"
   agent_token       = "/tvlk-secret/shared/eci/eciisa/eciisa-app/eciisa-app-token/agent_token.key"
 
   //todo
