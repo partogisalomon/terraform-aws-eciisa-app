@@ -14,8 +14,8 @@ resource "aws_ssm_parameter" "eciisa_token" {
   }
 
   lifecycle {
-      ignore_changes = [
-        "value",
-      ]
-    }
+    ignore_changes = [
+      "value",
+    ]
+  }
 }

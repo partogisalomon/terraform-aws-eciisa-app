@@ -1,25 +1,25 @@
 locals {
-  region_id         = "ap-southeast-1"
-  ami_id            = "ami-055c55112e25b1f1f"
-  instance_type     = "c5.xlarge"
+  region_id     = "ap-southeast-1"
+  ami_id        = "ami-055c55112e25b1f1f"
+  instance_type = "c5.xlarge"
 
-  service_name      = "eciisa"
-  service_role      = "app"
-  application       = "RHEL-7.6_HVM_GA-20190128-x86_64-0-Hourly2-GP2 (ami-055c55112e25b1f1f)"
-  description       = "Informatica Secure Agent to connect with Anaplan"
-  product_domain    = "eci"
-  app_service_port  = 443
-  root_volume_size  = 100
-  recipient         = "partogi.salomon@traveloka.com"
+  service_name     = "eciisa"
+  service_role     = "app"
+  application      = "RHEL-7.6_HVM_GA-20190128-x86_64-0-Hourly2-GP2 (ami-055c55112e25b1f1f)"
+  description      = "Informatica Secure Agent to connect with Anaplan"
+  product_domain   = "eci"
+  app_service_port = 443
+  root_volume_size = 100
+  recipient        = "partogi.salomon@traveloka.com"
 
-  environment       = "${var.environment}"
-  vpc_id            = "${var.vpc_id}"
-  subnet_id         = "${var.subnet_id}"
-  oebs_app_profile  = "${var.oebs_app_profile}"
+  environment      = "${var.environment}"
+  vpc_id           = "${var.vpc_id}"
+  subnet_id        = "${var.subnet_id}"
+  oebs_app_profile = "${var.oebs_app_profile}"
 
-  datadog_api_key   = "/tvlk-secret/shared/eci/datadog/datadog.api.key"
-  datadog_app_key   = "/tvlk-secret/shared/eci/datadog/datadog.app.key"
-  agent_token       = "/tvlk-secret/shared/eci/eciisa/eciisa-app/eciisa-app-token/agent_token.key"
+  datadog_api_key = "/tvlk-secret/shared/eci/datadog/datadog.api.key"
+  datadog_app_key = "/tvlk-secret/shared/eci/datadog/datadog.app.key"
+  agent_token     = "/tvlk-secret/shared/eci/eciisa/eciisa-app/eciisa-app-token/agent_token.key"
 
   instance_userdata = <<EOF
           #cloud-config

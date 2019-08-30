@@ -10,7 +10,6 @@ module "eciisa_role" {
   environment    = "${local.environment}"
 }
 
-
 ##################
 # EC2 eciisa
 ##################
@@ -38,7 +37,6 @@ resource "aws_instance" "eciisa-app" {
     Name          = "${local.service_name}-${local.service_role}-01"
   }
 }
-
 
 ##################
 # S3 bucket
@@ -122,7 +120,6 @@ resource "aws_s3_bucket_policy" "b" {
 POLICY
 }
 
-
 ##################
 # Security Group
 ##################
@@ -138,12 +135,12 @@ resource "aws_security_group" "eciisa-app" {
   vpc_id      = "${local.vpc_id}"
 
   tags {
-    Name                   = "${module.aws-resource-naming_sg_eciisa-app.name}"
-    Cluster                = "${local.service_name}-${local.service_role}"
-    Environment            = "${local.environment}"
-    ProductDomain          = "${local.product_domain}"
-    ManagedBy              = "terraform"
-    keep_alive             = "true"
+    Name          = "${module.aws-resource-naming_sg_eciisa-app.name}"
+    Cluster       = "${local.service_name}-${local.service_role}"
+    Environment   = "${local.environment}"
+    ProductDomain = "${local.product_domain}"
+    ManagedBy     = "terraform"
+    keep_alive    = "true"
   }
 }
 
@@ -156,12 +153,11 @@ resource "aws_security_group_rule" "eciisa-app-egress" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-
 ##################
 # Datadog dashboard and monitor
 ##################
 module "system" {
-  source         = "github.com/traveloka/terraform-datadog-system"
+  source = "github.com/traveloka/terraform-datadog-system"
 
   product_domain = "${local.product_domain}"
   service        = "${local.service_name}"

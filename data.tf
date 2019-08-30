@@ -1,6 +1,5 @@
 data "aws_region" "current" {}
-data "aws_caller_identity" "current" {
-}
+data "aws_caller_identity" "current" {}
 
 data "aws_iam_role" "eciisa_app_profile" {
   name = "${module.eciisa_role.role_name}"
